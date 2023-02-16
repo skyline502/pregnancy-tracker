@@ -5,8 +5,25 @@ name = "pypi"
 
 [packages]
 alembic = "*"
+bidict = "*"
+boto3 = "*"
+click = "*"
+dnspython = "*"
+eventlet = "*"
+flask = "*"
+flask-cors = "*"
+flask-login = "*"
+flask-migrate = "*"
+flask-wtf = "*"
+gunicorn = "*"
+jinja2 = "*"
+python-dotenv = "*"
+python-editor = "*"
+python-engineio = "*"
+python-socketio = "*"
 
 [dev-packages]
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.9"
