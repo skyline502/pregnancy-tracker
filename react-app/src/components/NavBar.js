@@ -13,12 +13,12 @@ const NavBar = () => {
 
   const showLoginForm = () => {
     dispatch(setCurrentModal(LoginForm));
-    dispatch(showModal);
+    dispatch(showModal());
   }
 
   const showSignUpForm = () => {
     dispatch(setCurrentModal(SignUpForm));
-    dispatch(showModal);
+    dispatch(showModal());
   }
   return (
     <nav>
