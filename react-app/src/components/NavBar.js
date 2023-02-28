@@ -21,25 +21,25 @@ const NavBar = () => {
     dispatch(showModal());
   }
   return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to='/' exact={true} activeClassName='active'>
+    <nav className='bg-light nav'>
+      <ul className='nav'>
+        <li className='nav-item'>
+          <NavLink className='nav-link active' to='/' exact={true} activeClassName='active'>
             Home
           </NavLink>
         </li>
-        <li>
-          <div onClick={showLoginForm}>Login</div>
+        <li className='nav-item'>
+          <div className='nav-link active' onClick={showLoginForm}>Login</div>
         </li>
-        <li>
-          <div onClick={showSignUpForm}>Sign up</div>
+        <li className='nav-item'>
+          <div className='nav-link active' onClick={showSignUpForm}>Sign up</div>
         </li>
-        <li>
-          <NavLink to='/users' exact={true} activeClassName='active'>
+        <li className='nav-item'>
+          <NavLink className='nav-link active' to='/users' exact={true} activeClassName='active'>
             Users
           </NavLink>
         </li>
-        <li>
+        <li className='nav-item'>
           <LogoutButton />
         </li>
       </ul>
