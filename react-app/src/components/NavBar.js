@@ -21,7 +21,7 @@ const NavBar = () => {
     dispatch(showModal());
   }
   return (
-    <nav className='bg-light'>
+    <nav className='bg-light navbar-nav mx-auto'>
       <ul className='nav'>
         <li className='nav-item'>
           <NavLink className='nav-link active text-warning' to='/' exact={true} activeClassName='active'>

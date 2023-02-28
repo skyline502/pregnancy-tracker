@@ -35,7 +35,7 @@ function App() {
           <User />
         </ProtectedRoute>
         <Route path="/" exact={true}>
-          <div className="container m-2 text-primary">
+          <div className="container m-2 text-primary mx-auto text-warning">
             <h1>Your Pregnancy Tracker</h1>
           </div>
         </Route>
