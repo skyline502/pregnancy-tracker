@@ -21,8 +21,8 @@ const NavBar = () => {
     dispatch(showModal());
   }
   return (
-    <nav className='bg-light navbar-nav mx-auto'>
-      <ul className='nav'>
+    <nav className='bg-light'>
+      <ul className='nav d-flex justify-content-space-around '>
         <li className='nav-item'>
           <NavLink className='nav-link active text-warning' to='/' exact={true} activeClassName='active'>
             Home
