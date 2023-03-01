@@ -6,10 +6,13 @@ import LoginForm from './auth/LoginForm';
 import SignUpForm from './auth/SignUpForm';
 import { useDispatch } from 'react-redux';
 import { showModal, setCurrentModal } from '../store/modal';
+import { useSelector } from 'react-redux';
 
 
 const NavBar = () => {
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.session.user);
+  console.log(user, 'user....')
 
   const showLoginForm = () => {
     dispatch(setCurrentModal(LoginForm));
@@ -21,29 +24,27 @@ const NavBar = () => {
     dispatch(showModal());
   }
   return (
-    <nav className='bg-light'>
-      <ul className='nav d-flex justify-content-space-around '>
+      <ul className='nav justify-content-around bg-light py-1'>
         <li className='nav-item'>
-          <NavLink className='nav-link active text-warning' to='/' exact={true} activeClassName='active'>
+          <NavLink className='nav-link active text-info' to='/' exact={true} activeClassName='active'>
             Home
           </NavLink>
         </li>
         <li className='nav-item'>
-          <div className='nav-link active text-warning' onClick={showLoginForm}>Login</div>
+          <div className='nav-link active text-info' onClick={showLoginForm}>Login</div>
         </li>
         <li className='nav-item'>
-          <div className='nav-link active text-warning' onClick={showSignUpForm}>Sign up</div>
+          <div className='nav-link active text-info' onClick={showSignUpForm}>Sign up</div>
         </li>
         <li className='nav-item'>
-          <NavLink className='nav-link active text-warning' to='/users' exact={true} activeClassName='active'>
+          <NavLink className='nav-link active text-info' to='/users' exact={true} activeClassName='active'>
             Users
           </NavLink>
         </li>
-        <li className='nav-item mx-auto'>
+        <li className='nav-item'>
           <LogoutButton />
         </li>
       </ul>
-    </nav>
   );
 }
 
