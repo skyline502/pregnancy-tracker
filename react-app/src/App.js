@@ -43,7 +43,7 @@ function App() {
             </div>
           ) : (
             <div className="container text-warning justify-content-around p-2">
-              <h1>Please Login</h1>
+              <h1 className="h1 text-center">Please Login</h1>
               <LoginForm />
             </div>
           )}
