@@ -39,11 +39,14 @@ function App() {
         <Route path="/" exact={true}>
           {user ? (
             <div className="container-fluid m-2 mx-auto text-warning">
-              <h1>Your Pregnancy Tracker</h1>
+              <h1 className="font-weight-light">Your Pregnancy Tracker</h1>
             </div>
           ) : (
             <div className="container text-warning justify-content-around p-2">
-              <h1 className="h1 text-center">Please Login</h1>
+              <h1 className="text-center">
+                Returning Mom?
+                <small className="text-muted"> Please Log in!</small>
+              </h1>
               <LoginForm />
             </div>
           )}
