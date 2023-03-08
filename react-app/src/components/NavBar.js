@@ -34,11 +34,11 @@ const NavBar = () => {
           <div className='nav-link active text-info' onClick={showLoginForm}>Login</div>
         </li>
         <li className='nav-item'>
-          <div className='nav-link active text-info' onClick={showSignUpForm}>Sign up</div>
+          <div className='nav-link active text-info' onClick={showSignUpForm}>New Mom</div>
         </li>
         <li className='nav-item'>
           <NavLink className='nav-link active text-info' to='/users' exact={true} activeClassName='active'>
-            Users
+            Mothers
           </NavLink>
         </li>
         <li className='nav-item'>
