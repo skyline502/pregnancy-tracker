@@ -73,6 +73,7 @@ const LoginForm = () => {
           Login
         </button>
         <button
+          type="button"
           className="btn btn-secondary text-white"
           onClick={handleShow}
         >

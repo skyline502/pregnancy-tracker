@@ -43,50 +43,54 @@ const SignUpForm = () => {
   }
 
   return (
-    <form onSubmit={onSignUp}>
+    <form onSubmit={onSignUp} className="container justify-content-center">
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
-      <div>
+      <div className='form-group'>
         <label>User Name</label>
         <input
           type='text'
+          className='form-control'
           name='username'
           onChange={updateUsername}
           value={username}
         ></input>
       </div>
-      <div>
+      <div className='form-group'>
         <label>Email</label>
         <input
           type='text'
+          className='form-control'
           name='email'
           onChange={updateEmail}
           value={email}
         ></input>
       </div>
-      <div>
+      <div className='form-group'>
         <label>Password</label>
         <input
           type='password'
+          className='form-control'
           name='password'
           onChange={updatePassword}
           value={password}
         ></input>
       </div>
-      <div>
+      <div className='form-group'>
         <label>Repeat Password</label>
         <input
           type='password'
+          className='form-control'
           name='repeat_password'
           onChange={updateRepeatPassword}
           value={repeatPassword}
           required={true}
         ></input>
       </div>
-      <button type='submit'>Sign Up</button>
+      <button className='btn btn-primary mt-2' type='submit'>Sign Up</button>
     </form>
   );
 };
