@@ -86,12 +86,10 @@ const LoginForm = () => {
         animation={true}
         aria-labelledby="contained-modal-title-vcenter"
       >
-        <Modal.Header closeButton className="form-group bg-info">
-          <Modal.Title>
-            <h4 className="text-light">New Mom</h4>
-          </Modal.Title>
+        <Modal.Header closeButton className="container bg-info">
+          <h4 className="text-light">New Mom</h4>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="modal-content">
           <SignUpForm />
         </Modal.Body>
       </Modal>
