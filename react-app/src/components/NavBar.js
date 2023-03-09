@@ -30,20 +30,22 @@ const NavBar = () => {
             Home
           </NavLink>
         </li>
-        <li className='nav-item'>
-          <div className='nav-link active text-info' onClick={showLoginForm}>Login</div>
-        </li>
-        <li className='nav-item'>
-          <div className='nav-link active text-info' onClick={showSignUpForm}>New Mom</div>
-        </li>
-        <li className='nav-item'>
+        {
+          user?
+          <li className='nav-item'>
           <NavLink className='nav-link active text-info' to='/users' exact={true} activeClassName='active'>
-            Mothers
+            Mom list
           </NavLink>
         </li>
-        <li className='nav-item'>
+        :<></>
+        }
+        {
+          user?
+          <li className='nav-item'>
           <LogoutButton />
         </li>
+        :<></>
+        }
       </ul>
   );
 }
