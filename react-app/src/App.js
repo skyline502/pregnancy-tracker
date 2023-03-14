@@ -13,6 +13,26 @@ function App() {
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
+  const today = new Date();
+  const period_year = user?.last_period.slice(4)
+  const period_month = user?.last_period.slice(0,2);
+  const period_day = user?.last_period.slice(2,4);
+  const period = new Date(period_year, period_month - 1, period_day);
+  console.log(today, 'today date')
+  console.log(period, 'last period')
+
+  const ms = today - period;
+  const seconds = ms/1000;
+  const min = seconds/60
+  const hours = min / 60
+  const days = hours/24;
+  const weeks = Math.trunc(days/7);
+  console.log(ms, 'how many ms')
+  console.log(seconds, 'how many seconds')
+  console.log(min, 'how many minutes')
+  console.log(hours, 'how many hours')
+  console.log(days, 'how many days')
+  console.log(weeks, 'how many weeks')
 
   useEffect(() => {
     (async () => {
@@ -40,6 +60,7 @@ function App() {
           {user ? (
             <div className="container-fluid m-2 mx-auto text-warning">
               <h1 className="font-weight-light">Your Pregnancy Tracker</h1>
+              <h2 className="font-weight-light">Week {weeks}</h2>
             </div>
           ) : (
             <div className="container text-warning justify-content-around p-2">
