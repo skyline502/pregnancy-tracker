@@ -59,8 +59,8 @@ function App() {
         <Route path="/" exact={true}>
           {user ? (
             <div className="container-fluid m-2 mx-auto text-warning">
-              <h1 className="font-weight-light">Your Pregnancy Tracker</h1>
-              <h2 className="font-weight-light">Week {weeks}</h2>
+              <h1 className="font-weight-light">Welcome back {user?.username}</h1>
+              <h2 className="font-weight-light text-dark bg-light">Week {weeks} Day {Math.floor(days % 7)}</h2>
             </div>
           ) : (
             <div className="container text-warning justify-content-around p-2">
