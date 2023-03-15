@@ -9,6 +9,7 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
+  const [lastPeriod, setLastPeriod] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
 
@@ -37,6 +38,8 @@ const SignUpForm = () => {
   const updateRepeatPassword = (e) => {
     setRepeatPassword(e.target.value);
   };
+
+  console.log(lastPeriod, 'last period....')
 
   if (user) {
     return <Redirect to='/' />;
@@ -87,6 +90,17 @@ const SignUpForm = () => {
           name='repeat_password'
           onChange={updateRepeatPassword}
           value={repeatPassword}
+          required={true}
+        ></input>
+      </div>
+      <div className='form-group'>
+        <label>Last Period</label>
+        <input
+          type="date"
+          className='form-control'
+          name='last_period'
+          onChange={e => setLastPeriod(e.target.value)}
+          value={lastPeriod}
           required={true}
         ></input>
       </div>
