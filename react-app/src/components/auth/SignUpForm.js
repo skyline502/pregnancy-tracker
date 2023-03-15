@@ -15,8 +15,10 @@ const SignUpForm = () => {
 
   const onSignUp = async (e) => {
     e.preventDefault();
+    let period = month + day + year;
+    console.log(period, 'period...')
     if (password === repeatPassword) {
-      const data = await dispatch(signUp(username, email, password));
+      const data = await dispatch(signUp(username, email, password, period));
       if (data) {
         setErrors(data)
       }
@@ -39,7 +41,10 @@ const SignUpForm = () => {
     setRepeatPassword(e.target.value);
   };
 
-  console.log(lastPeriod, 'last period....')
+  console.log(lastPeriod.split('-'), 'last period....')
+  const day = lastPeriod.split('-')[2];
+  const month = lastPeriod.split('-')[1];
+  const year = lastPeriod.split('-')[0];
 
   if (user) {
     return <Redirect to='/' />;
