@@ -18,6 +18,7 @@ const SignUpForm = () => {
     let period = month + day + year;
     console.log(period, 'period...')
     if (password === repeatPassword) {
+      console.log(period, 'period.....')
       const data = await dispatch(signUp(username, email, password, period));
       if (data) {
         setErrors(data)
