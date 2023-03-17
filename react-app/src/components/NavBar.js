@@ -41,6 +41,11 @@ const NavBar = () => {
         }
         {
           user?
+          <h4 className="font-weight-light">Welcome back {user?.username}!</h4>
+          :<></>
+        }
+        {
+          user?
           <li className='nav-item'>
           <LogoutButton />
         </li>
